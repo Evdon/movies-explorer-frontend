@@ -1,0 +1,24 @@
+.log-navigation{
+  display: flex;
+  justify-content: space-between;
+}
+
+.log-navigation__btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 30px;
+  text-decoration: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  color: #fff;
+}
+
+.log-navigation__btn_fill{
+  color: #000;
+  background-color: #3DDC84;
+  height: 32px;
+  width: 76px;
+  border-radius: 3px;
+}
