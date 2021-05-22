@@ -1,14 +1,12 @@
 import React from 'react';
+import Promo from '../Promo/Promo';
 
 import './Main.css';
 
 function Main() {
 
   return(
-    <header className='header'>
-      <a href='/' className='header__logo'></a>
-      <div className='header__log-nav'></div>
-    </header>
+    <Promo></Promo>
   );
 }
 

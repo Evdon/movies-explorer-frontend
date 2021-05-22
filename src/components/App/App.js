@@ -10,6 +10,7 @@ function App() {
       <Header />
 
       <Route exact path="/">
+        <Main />
       </Route>
       
     </div>
