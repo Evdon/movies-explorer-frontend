@@ -1,9 +1,10 @@
-.log-navigation{
+.navigation{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.log-navigation__btn{
+.navigation__link{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,13 +13,26 @@
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
   color: #fff;
 }
 
-.log-navigation__btn_fill{
+.navigation__link_fill{
   color: #000;
   background-color: #3DDC84;
   height: 32px;
   width: 76px;
   border-radius: 3px;
+}
+
+@media (max-width:767px) {
+  .navigation__link{
+    margin-left: 14px;
+  }
+
+  .navigation__link_fill{
+    height: 26px;
+    width: 54px;
+  }
 }

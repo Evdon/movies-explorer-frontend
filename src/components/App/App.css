@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  position: relative;
+}
+
+body{
+  background: #202020;;
 }
 
 .App-logo {

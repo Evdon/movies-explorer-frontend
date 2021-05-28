@@ -1,14 +1,40 @@
 .header{
   display: flex;
   height: 74px;
-  padding: 0 70px;
-  background-color: #073042;
+  background: #202020;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__hiden{
+  display: none;
+}
+
+.header__main{
+  background: #073042;
+}
+
+.header__area{
+  display: flex;
+  width: 1140px;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
 .header__logo{
   background: url('../../images/logo.svg');
   height: 38px;
   width: 38px;
+}
+
+@media (max-width:1279px) {
+  .header__area{
+    width: 708px;
+  }
+}
+
+@media (max-width:767px) {
+  .header__area{
+    width: 292px;
+  }
 }

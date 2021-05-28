@@ -1,0 +1,149 @@
+.register{
+  display: flex;
+  
+}
+
+.register__logo{
+  margin: 70px 0 40px;
+  width: 38px;
+  height: 38px;
+  background: url('../../images/logo.svg');
+}
+
+.register__area{
+  display: flex;
+  flex-direction: column;
+  width: 396px;
+  margin: 0 auto;
+}
+
+.register__title{
+  text-align: start;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin:0 0 20px;
+  
+  
+  color: #FFFFFF;
+}
+
+.register__form{
+  display: flex;
+  flex-direction: column;
+}
+
+.register__label{
+  text-align: start;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  margin: 20px 0 10px;
+  
+  color: #8B8B8B;
+}
+
+.register__input{
+  background: #2F2F2F;
+  border-radius: 8px;
+  height: 46px;
+  border: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  padding-left: 20px;
+  
+  
+  color: #FFFFFF;
+}
+
+.register__submit-btn{
+  margin: 91px 0 16px;
+  height: 45px;
+  border: none;
+  background: #4285F4;
+  border-radius: 3px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+
+.register__text{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  
+  text-align: center;
+  
+  color: #8B8B8B;
+}
+
+.register__link{
+  text-decoration: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  
+  text-align: center;
+  
+  color: #4285F4;
+}
+
+@media (max-width:1279px) {
+  .register__logo{
+    margin-top: 232px;
+  }
+}
+
+@media (max-width:767px) {
+  .register__logo{
+    margin: 56px auto 50px;
+  }
+
+  .register__title{
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .register__area{
+    width: 260px;
+  }
+
+  .register__input{
+    padding: 0 0 0 20px;
+  }
+
+  .register__submit-btn{
+    margin-top: 179px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .register__text{
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0 0 30px;
+  }
+  
+  .register__link{
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
