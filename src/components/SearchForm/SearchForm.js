@@ -1,16 +1,37 @@
-import FilterCheckbox from '../FilterCheckbox/FilterCheckbox.js';
+import React from 'react';
+import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 
 import './SearchForm.css';
 
-function SearchForm ({ path }) {
+function SearchForm ({ onSearch, handleFilter, filter }) {
+  const [keyword, setKeyword] = React.useState('');
+
+  function handleSearch(e) {
+    setKeyword(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    onSearch(keyword, filter)
+  }
+
   return(
     <section className='searchForm'>
-      <form className='searchForm__form'>
+      <form onSubmit={handleSubmit} className='searchForm__form'>
         <div className='searchForm__bar'>
-          <input className='searchForm__input' placeholder='Фильм' />
+          <input
+            onChange={handleSearch}
+            className='searchForm__input' 
+            placeholder='Фильм'
+            type='text'
+            value={keyword || ''}
+          />
           <button className='searchForm__sbmt-btn'>Найти</button>
         </div>
-        <FilterCheckbox />
+        <FilterCheckbox
+          handleFilter={handleFilter}
+          filter={filter}
+        />
       </form>
     </section>
   );

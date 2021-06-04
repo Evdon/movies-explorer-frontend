@@ -2,19 +2,42 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 
 import './MoviesCardList.css';
 
-function MoviesCardList ({ path }) {
-  var arr = [1, 2, 3, 4, 2, 3, 4, 2, 3, 4, 2, 3];
+function MoviesCardList ({ path, movies, numberOfMovies, handleMore, searching, saveMovie, deleteMovie, filter }) {
+  
+  const moviesCard = movies
+    .filter((card, number) => number < numberOfMovies)
+    .map((item) => {
+    return (
+      <MoviesCard 
+        path={path}
+        movie={item}
+        saveMovie={saveMovie}
+        deleteMovie={deleteMovie}
+        key={item.id}
+      />
+    )
+  })
 
   return(
     <section className='moviesCardList'>
       <div className='moviesCardList__list'>
-        {arr.map((card) => (
-          <MoviesCard 
-            path={path}
-          />
-        ))}
+        {moviesCard}
       </div>
-      <button className='moviesCardList__more-btn'>Ещё</button>
+      {movies.length > numberOfMovies && ( 
+      <button className='moviesCardList__more-btn' onClick={handleMore}>Ещё</button> 
+      )}
+      {!movies.length && !searching && path === '/movies' ? (
+        <p className='moviesCardList__text'>Начните поиск</p>
+      ) : undefined 
+      }
+      {!movies.length && !searching && path === '/saved-movies' ? (
+        <p className='moviesCardList__text'>Добавьте фильм в избранное</p>
+      ) : undefined 
+      }
+      {!movies.length && searching ? (
+        <p className='moviesCardList__text'>Ничего не найдено</p>
+      ) : undefined
+      }
     </section>
   );
 }

@@ -42,7 +42,7 @@
   font-weight: normal;
   font-size: 10px;
   line-height: 12px;
-  margin: 20px 0 10px;
+  margin: 10px 0 10px;
   
   color: #8B8B8B;
 }
@@ -63,8 +63,13 @@
   color: #FFFFFF;
 }
 
+.register__input-error{
+  color: #EE3465;
+}
+
 .register__submit-btn{
-  margin: 91px 0 16px;
+  cursor: pointer;
+  margin: 179px 0 16px;
   height: 45px;
   border: none;
   background: #4285F4;
@@ -78,6 +83,16 @@
   text-align: center;
   
   color: #FFFFFF;
+  transition: opacity ease-in-out 0.3s;
+}
+
+.register__submit-btn:hover{
+  opacity: 0.8;
+}
+
+.register__submit-btn_disabled{
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .register__text{
@@ -103,6 +118,18 @@
   text-align: center;
   
   color: #4285F4;
+}
+
+.register__error{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  margin-top: 10px;
+  height: 12px;
+  color: #EE3465;
+  text-align: start;
 }
 
 @media (max-width:1279px) {

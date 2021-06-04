@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { CurrentUserContext } from '../../contexts/CurrentUserContext.js';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import NavigationAuth from '../NavigationAuth/NavigationAuth';
@@ -7,9 +6,7 @@ import NavigationAuth from '../NavigationAuth/NavigationAuth';
 import './Header.css';
 
 function Header(props) {
-  const { path, isOpen, onClose, onOpen } = props;
-
-  const currentUser = useContext(CurrentUserContext);
+  const { path, isOpen, onClose, onOpen, loggedIn } = props;
 
   const headerClasses = `header ${
     (path === '/') ? 'header__main' : ''
@@ -23,7 +20,7 @@ function Header(props) {
     <header className={headerClasses}>
       <div className='header__area'>
         <NavLink to='/' className='header__logo'></NavLink>
-        {currentUser.loggedIn
+        {loggedIn
           ? <NavigationAuth
               isOpen={isOpen}
               onClose={onClose}

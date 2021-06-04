@@ -42,7 +42,7 @@
   font-weight: normal;
   font-size: 10px;
   line-height: 12px;
-  margin: 20px 0 10px;
+  margin: 10px 0 10px;
   
   color: #8B8B8B;
 }
@@ -64,6 +64,7 @@
 }
 
 .login__submit-btn{
+  cursor: pointer;
   margin: 179px 0 16px;
   height: 45px;
   border: none;
@@ -78,6 +79,16 @@
   text-align: center;
   
   color: #FFFFFF;
+  transition: opacity ease-in-out 0.3s;
+}
+
+.login__submit-btn:hover{
+  opacity: 0.8;
+}
+
+.login__submit-btn_disabled{
+  opacity: 0.2;
+  pointer-events: none;
 }
 
 .login__text{
@@ -104,6 +115,22 @@
   
   color: #4285F4;
   
+}
+
+.login__error{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  margin-top: 10px;
+  height: 12px;
+  color: #EE3465;
+  text-align: start;
+}
+
+.login__input-error{
+  color: #EE3465;
 }
 
 @media (max-width:1279px) {

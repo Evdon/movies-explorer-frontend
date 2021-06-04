@@ -11,6 +11,16 @@
   flex-wrap: wrap;
 }
 
+.moviesCardList__text{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 200px auto;
+  color: #FFFFFF;
+}
+
 .moviesCardList__more-btn{
   display: flex;
   width: 1140px;

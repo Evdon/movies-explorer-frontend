@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import me from '../../images/me.jpg';
 
 import './AboutMe.css';
@@ -15,8 +14,8 @@ function AboutMe() {
           <p className='aboutMe__jobAge'>Деловая колбаса, 21 год</p>
           <p className='aboutMe__about'>На данный момент живу и учусь в Волгограде. Люблю Яндекс. Холост.</p>
           <ul className='aboutMe__links-area'>
-            <li><NavLink to='https://www.facebook.com/yandex/' className='aboutMe__link'>Facebook</NavLink></li>
-            <li><NavLink to='https://github.com/Evdon' className='aboutMe__link'>Git</NavLink></li>
+            <li><a href='https://www.facebook.com/yandex/' className='aboutMe__link' target='_blank' rel='noreferrer'>Facebook</a></li>
+            <li><a href='https://github.com/Evdon' className='aboutMe__link' target='_blank' rel='noreferrer'>Git</a></li>
           </ul>
         </div>
         <img src={me} alt='me' className='aboutMe__img'></img>

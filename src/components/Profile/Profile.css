@@ -50,15 +50,20 @@
 
 .profile__input-area:first-child{
   margin-top: 0;
-  padding-bottom: 16px;
+  padding-bottom: 0;
   border-bottom: 1px solid #424242;
 }
 
 .profile__input-area{
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 410px;
   margin: 17px auto 0;
+}
+
+.profile__input-container{
+  display: flex;
+  justify-content: space-between;
 }
 
 .profile__input-list{
@@ -66,6 +71,7 @@
 }
 
 .profile__submit-btn{
+  cursor: pointer;
   background: none;
   border: none;
   font-family: Inter;
@@ -84,7 +90,9 @@
 }
 
 .profile__exit-btn{
-  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
   font-family: Inter;
   font-style: normal;
   font-weight: 500;
@@ -95,6 +103,19 @@
   text-align: center;
   
   color: #EE3465;
+}
+
+.profile__error{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  margin: 5px 0;
+  height: 12px;
+  width: 410px;
+  color: #EE3465;
+  text-align: end;
 }
 
 @media (max-width:1279px) {
