@@ -257,7 +257,7 @@ function App() {
   function onSearch(keyword, filter) {
     moviesApi.getMovies().then((cards) => {
       setSearching(true);
-      const searchMovies = filterMovies(cards, keyword, filter);
+      const searchMovies = filterMovies(cards, keyword);
       getSaved(searchMovies, savedMovies);
       localStorage.setItem('movies', JSON.stringify(searchMovies));
     });
@@ -274,6 +274,14 @@ function App() {
     localStorage.removeItem('token');
     setLoggedIn(false);
     history.push('/');
+  }
+
+  function onSearchSaved(keyword) {
+    const token = localStorage.getItem('token');
+    mainApi.getLikedMovies(token).then((cards) =>{
+      const searchCards = filterMovies(cards, keyword);
+      setSavedMovies(searchCards);
+    })
   }
 
   function popupOnSubmit() {
@@ -313,7 +321,7 @@ function App() {
             path='/saved-movies'
             component={SavedMovies}
             numberOfMovies={numberOfMovies}
-            onSearch={onSearch}
+            onSearch={onSearchSaved}
             handleFilter={handleFilter}
             handleMore={handleMore}
             deleteMovie={handleDeleteMovie}

@@ -51,6 +51,8 @@
 
 .promo__btn{
   font-family: Inter;
+  text-decoration: none;
+  width: 131px;
   color: #FFFFFF;
   background-color: unset;
   padding: 10px 20px;
