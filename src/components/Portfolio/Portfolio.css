@@ -1,0 +1,124 @@
+.portfolio{
+  display: flex;
+  flex-direction: column;
+  background: #202020;
+}
+
+.portfolio__title{
+  text-align: start;
+  width: 1140px;
+  height: 27px;
+  padding: 0;
+  margin: 0 auto 50px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  
+  color: #8B8B8B;
+}
+
+.portfolio__list{
+  width: 1140px;
+  margin: 0 auto 125px;
+  padding: 0;
+}
+
+.portfolio__list-item{
+  display: flex;
+  height: 69px;
+  border-bottom: 1px solid #424242;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.portfolio__list-item:last-of-type{
+  border-bottom: none;
+  margin-bottom: 0;
+  height: 50px;
+}
+
+.portfolio__link{
+  text-align: start;
+  text-decoration: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 50px;
+  height: 50px;
+  width: 880px;
+  
+  letter-spacing: -0.04em;
+  
+  color: #FFFFFF;
+}
+
+.portfolio__link-arrow{
+  text-decoration: none;
+  width: 29px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 60px;
+  height: 50px;
+  
+  letter-spacing: -0.04em;
+  
+  color: #FFFFFF;
+  border-bottom: none;
+  
+}
+
+@media (max-width:1279px) {
+  .portfolio__title{
+    width: 668px;
+  }
+  .portfolio__list{
+    width: 668px;
+    margin-bottom: 90px;
+    padding: 0;
+  }
+  .portfolio__link{
+    width: auto;
+  }
+}
+
+@media (max-width:767px) {
+  .portfolio__title{
+    width: 292px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
+  }
+
+  .portfolio__list{
+    width: 292px;
+    padding: 0;
+    margin-bottom: 48px;
+  }
+
+  .portfolio__list-item{
+    display: flex;
+    height: 48px;
+    border-bottom: 1px solid #E6E6E6;
+    list-style-type: none;
+    justify-content: space-between;
+  }
+
+  .portfolio__link{
+    width: auto;
+    font-size: 18px;
+    line-height: 28px;
+    height: 28px;
+  }
+
+  .portfolio__link-arrow{
+    font-size: 18px;
+    line-height: 28px;
+    height: 28px;
+  }
+}

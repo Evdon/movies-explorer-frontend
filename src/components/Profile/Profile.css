@@ -1,0 +1,157 @@
+.profile{
+  display: flex;
+  background: #202020;
+}
+
+.profile__form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.profile__title{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 74px auto 123px;
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+
+.profile__label{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  
+  
+  color: #FFFFFF;
+}
+
+.profile__input{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  background: none;
+  border: none;
+  padding: 0;
+  
+  text-align: right;
+  
+  color: #FFFFFF;
+}
+
+.profile__input-area:first-child{
+  margin-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #424242;
+}
+
+.profile__input-area{
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+  margin: 17px auto 0;
+}
+
+.profile__input-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__input-list{
+  margin: 0 0 220px;
+}
+
+.profile__submit-btn{
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  padding: 0;
+  margin: 0 auto 16px;
+  line-height: 16px;
+  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color: #FFFFFF;
+}
+
+.profile__exit-btn{
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0 auto 70px;
+  
+  text-align: center;
+  
+  color: #EE3465;
+}
+
+.profile__error{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  margin: 5px 0;
+  height: 12px;
+  width: 410px;
+  color: #EE3465;
+  text-align: end;
+}
+
+@media (max-width:1279px) {
+  .profile__title{
+    margin: 236px auto 96px;
+  }
+
+  .profile__input-list{
+    margin: 0 0 210px;
+  }
+}
+
+@media (max-width:767px) {
+  .profile__title{
+    margin: 70px auto 80px;
+  }
+
+  .profile__input-area{
+    width: 260px;
+  }
+
+  .profile__input-list{
+    margin: 0 0 379px;
+  }
+
+  .profile__exit-btn{
+    margin-bottom: 40px;
+  }
+
+  .profile__submit-btn{
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  .profile__exit-btn{
+    font-size: 12px;
+    line-height: 15px;  
+  }
+}

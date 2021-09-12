@@ -1,0 +1,149 @@
+.moviesCard{
+  display: flex;
+  width: 270px;
+  min-height: 230px;
+  flex-direction: column;
+  margin: 38px 20px 0 0;
+}
+
+.moviesCard:nth-child(4n){
+  margin: 38px 0 0;
+}
+
+.moviesCard__name{
+  display: flex;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+  align-items: center;
+  height: 24px;
+  text-align: start;
+  text-overflow: ellipsis;
+
+  color: #FFFFFF;
+}
+
+.moviesCard__like{
+  width: 24px;
+  height: 24px;
+  background: #313131;
+  border-radius: 36px;
+  border: none;
+  padding: 0;
+  background-image: url('../../images/likeOff.svg');
+  background-repeat: no-repeat;
+  background-size: 10px 8.5px;
+  background-position: center;
+}
+
+.moviesCard__like_active{
+  background-image: url('../../images/likeOn.svg');
+  background-repeat: no-repeat;
+  background-size: 10px 8.5px;
+  background-position: center;
+}
+
+.moviesCard__delete{
+  width: 24px;
+  height: 24px;
+  background: #313131;
+  border-radius: 36px;
+  border: none;
+  padding: 0;
+  background-image: url('../../images/delete.svg');
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.moviesCard__delete:hover{
+  cursor: pointer;
+}
+
+#card:hover .moviesCard__delete{
+  opacity: 1;
+}
+
+.moviesCard__img{
+  width: 270px;
+  height: 151px;
+}
+
+.moviesCard__info-area{
+  display: flex;
+  margin: 10px 0 0;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #424242;
+  justify-content: space-between;
+}
+
+.moviesCard__time{
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  margin: 6px 0 0;
+  
+  color: #8B8B8B;
+  
+}
+
+@media (max-width:1279px) {
+  .moviesCard{
+    width: 339px;
+    height: 269px;
+    margin: 30px 30px 0 0;
+  }
+
+  .moviesCard__img{
+    width: 339px;
+    height: 190px;
+  }
+
+  .moviesCard:nth-child(4n){
+    margin: 30px 30px 0 0;
+  }
+
+  .moviesCard:nth-child(2n){
+    margin: 30px 0 0;
+  }
+}
+
+@media (max-width:767px) {
+  .moviesCard{
+    width: 300px;
+    height: 246px;
+  }
+
+  .moviesCard__img{
+    width: 300px;
+    height: 168px;
+  }
+
+  .moviesCard:nth-child(1n){
+    margin: 34px 0 0;
+  }
+
+  .moviesCard__info-area{
+    padding-bottom: 29px;
+  }
+
+  .moviesCard__name{
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .moviesCard__time{
+    font-size: 10px;
+    line-height: 12px;
+    
+  }
+}
